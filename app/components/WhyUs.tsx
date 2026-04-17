@@ -30,7 +30,7 @@ export default function WhyUs() {
       />
       <div className="container-narrow relative">
         <p className="text-xs font-bold tracking-[0.3em] text-brand-300">WHY 身의손</p>
-        <h2 className="mt-3 max-w-2xl font-serif text-3xl font-black leading-tight sm:text-5xl">
+        <h2 className="mt-3 max-w-2xl font-serif text-3xl font-black leading-[1.25] sm:text-5xl sm:leading-[1.18]">
           왜 오남 분들이
           <br />
           여기만 다시 찾을까요?

@@ -13,7 +13,7 @@ export default function Pricing() {
         <div className="grid gap-12 md:grid-cols-[1fr_1.4fr] md:items-start">
           <div>
             <p className="text-xs font-bold tracking-[0.3em] text-brand-500">MENU</p>
-            <h2 className="mt-3 font-serif text-3xl font-black leading-tight text-brand-900 sm:text-5xl">
+            <h2 className="mt-3 font-serif text-3xl font-black leading-[1.25] text-brand-900 sm:text-5xl sm:leading-[1.18]">
               시술 메뉴
             </h2>
             <p className="mt-5 text-sm leading-relaxed text-brand-700">

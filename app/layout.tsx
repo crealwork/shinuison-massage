@@ -40,23 +40,14 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     url: SITE_URL,
     siteName: BUSINESS_NAME,
-    title: "오남 마사지 | 신의손 마사지 - 시원한 경락·강한압 전문",
+    title: "오남 마사지 | 身의손 마사지 - 시원한 경락·강한압 전문",
     description:
       "진짜 시원한 마사지, 압이 강한 경락마사지 전문. 오남 지역 숙련 관리사. 예약 010-3419-5755.",
-    images: [
-      {
-        url: "/og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "신의손 마사지 - 오남 경락마사지 전문",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "오남 마사지 | 신의손 마사지",
+    title: "오남 마사지 | 身의손 마사지",
     description: "시원한 경락마사지, 강한 압 전문. 예약 010-3419-5755.",
-    images: ["/og.jpg"],
   },
   robots: {
     index: true,
@@ -87,14 +78,15 @@ const jsonLd = {
     "오남읍 경락마사지 전문점. 시원하고 압이 강한 마사지와 전신 신체관리 서비스를 제공합니다.",
   url: SITE_URL,
   telephone: `+82-${PHONE.replace(/-/g, "").replace(/^0/, "")}`,
-  image: `${SITE_URL}/og.jpg`,
+  image: `${SITE_URL}/opengraph-image`,
   priceRange: "₩₩",
   address: {
     "@type": "PostalAddress",
     addressCountry: "KR",
     addressRegion: "경기도",
-    addressLocality: "남양주시 진접읍",
-    streetAddress: "진접읍 (오남 인접)",
+    addressLocality: "남양주시 오남읍",
+    streetAddress: "진건오남로884번길 20, 1층 일부",
+    postalCode: "",
   },
   areaServed: [
     { "@type": "City", name: "남양주시" },

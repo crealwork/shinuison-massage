@@ -11,7 +11,7 @@ export default function Hero() {
             <span className="h-1.5 w-1.5 rounded-full bg-brand-500" />
             오남 · 진접 · 남양주 경락마사지
           </p>
-          <h1 className="mt-5 font-serif text-[2.6rem] font-black leading-[1.05] tracking-tight text-brand-900 sm:text-6xl">
+          <h1 className="mt-5 font-serif text-[2.6rem] font-black leading-[1.25] tracking-tight text-brand-900 sm:text-6xl sm:leading-[1.18]">
             진짜 시원한
             <br />
             <span className="relative inline-block">

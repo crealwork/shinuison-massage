@@ -32,7 +32,7 @@ export default function Services() {
         <div className="flex items-end justify-between gap-6">
           <div>
             <p className="text-xs font-bold tracking-[0.3em] text-brand-500">SERVICES</p>
-            <h2 className="mt-3 font-serif text-3xl font-black leading-tight text-brand-900 sm:text-5xl">
+            <h2 className="mt-3 font-serif text-3xl font-black leading-[1.25] text-brand-900 sm:text-5xl sm:leading-[1.18]">
               오남에서 가장
               <br />시원한 손맛.
             </h2>
