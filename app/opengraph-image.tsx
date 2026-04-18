@@ -125,8 +125,8 @@ export default function OGImage() {
                   marginTop: 8,
                 }}
               >
-                <div style={{ display: "flex" }}>뭉친 근육, 정확히 짚어</div>
-                <div style={{ display: "flex" }}>강한 압으로 풀어드립니다.</div>
+                <div style={{ display: "flex" }}>뭉친 근육을 깊숙이,</div>
+                <div style={{ display: "flex" }}>통증관리로 풀어드립니다.</div>
               </div>
             </div>
           </div>

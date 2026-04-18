@@ -15,7 +15,7 @@ export default function Footer() {
             </div>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-brand-300">
               뭉친 근육을 정확히 풀어드리는 <b className="text-brand-100">근육전문 마사지</b>.
-              강한 압, 시원한 손맛. 10년 경력 관리사가 운영하는 오남·남양주 근육전문
+              통증관리, 시원한 손맛. 10년 경력 관리사가 운영하는 오남·남양주 근육전문
               마사지샵입니다.
             </p>
           </div>

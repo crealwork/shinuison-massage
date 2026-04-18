@@ -22,9 +22,9 @@ export default function Hero() {
             오남 身의손.
           </h1>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-brand-700 sm:text-lg">
-            <b className="text-brand-900">身의손 마사지</b>는 뭉친 근육을 정확히 짚어
+            <b className="text-brand-900">身의손 마사지</b>는 뭉친 근육을
             풀어드리는 <b className="text-brand-900">근육전문 마사지샵</b>입니다.
-            어설픈 마사지 말고, 강한 압·시원한 손맛으로 근육 깊숙한 곳까지
+            어설픈 마사지 말고, 통증관리·시원한 손맛으로 근육 깊숙한 곳까지
             풀어드립니다.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
