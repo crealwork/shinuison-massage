@@ -1,26 +1,27 @@
 const services = [
   {
     tag: "01",
-    title: "경락 마사지",
-    desc: "막힌 경혈과 경락을 풀어 기혈순환을 돕는 전통 동양 마사지. 만성 피로·부종 개선에 효과적.",
-    highlights: ["전신 경락 60분", "등·어깨 집중 30분"],
+    title: "근육전문 마사지",
+    desc: "뭉친 근육을 정확히 짚어 깊숙한 곳까지 풀어드리는 대표 시그니처. 목·어깨·등·허리 통증에 가장 효과적.",
+    highlights: ["전신 근육 60분", "목·어깨 집중 40분", "허리·골반 60분"],
+    featured: true,
   },
   {
     tag: "02",
     title: "강한압 통증 마사지",
-    desc: "뭉친 근육 깊숙한 곳까지 파고드는 강한 압. 거북목·어깨결림·허리통증 타겟 케어.",
-    highlights: ["목·어깨 집중 40분", "허리·골반 60분"],
+    desc: "깊숙한 근막까지 파고드는 강한 압력. 거북목·어깨결림·만성 근육통 타겟 케어.",
+    highlights: ["근막이완 집중", "만성 통증 완화"],
   },
   {
     tag: "03",
-    title: "시원한 전신 마사지",
-    desc: "발끝부터 두피까지, 진짜 시원한 손맛으로 하루 피로를 단번에 해소하는 풀바디 코스.",
-    highlights: ["풀바디 90분", "풀바디 120분"],
+    title: "경락 마사지",
+    desc: "근육 이완과 함께 경혈을 자극해 기혈 순환을 돕는 전통 경락 테라피. 만성 피로·부종에 효과.",
+    highlights: ["전신 경락 60분", "부분 경락 30분"],
   },
   {
     tag: "04",
     title: "신체관리 · 바디케어",
-    desc: "체형 교정과 순환 관리를 병행하는 바디케어. 부기·셀룰라이트·체형불균형 맞춤 관리.",
+    desc: "체형 교정과 순환 관리. 부기·셀룰라이트·체형 불균형 맞춤 관리로 컨디션 회복.",
     highlights: ["복부·다리 관리", "체형밸런스 관리"],
   },
 ];
@@ -33,12 +34,13 @@ export default function Services() {
           <div>
             <p className="text-xs font-bold tracking-[0.3em] text-brand-500">SERVICES</p>
             <h2 className="mt-3 font-serif text-3xl font-black leading-[1.25] text-brand-900 sm:text-5xl sm:leading-[1.18]">
-              오남에서 가장
-              <br />시원한 손맛.
+              오남·남양주
+              <br />
+              근육전문 마사지.
             </h2>
           </div>
           <p className="hidden max-w-xs text-sm text-brand-600 md:block">
-            전통 경락부터 현대식 통증관리까지, 몸 상태에 맞춰 강도와 부위를 조절합니다.
+            뭉친 근육을 집중 타겟팅. 근육전문 기법에 경락·통증관리까지 몸 상태에 맞춰 조절합니다.
           </p>
         </div>
 
@@ -46,23 +48,60 @@ export default function Services() {
           {services.map((s) => (
             <article
               key={s.tag}
-              className="group relative overflow-hidden rounded-3xl border border-brand-100 bg-brand-50/60 p-7 transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-xl hover:shadow-brand-900/5"
+              className={`group relative overflow-hidden rounded-3xl border p-7 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-900/10 ${
+                s.featured
+                  ? "border-brand-900 bg-brand-900 text-brand-50"
+                  : "border-brand-100 bg-brand-50/60 hover:border-brand-300"
+              }`}
             >
               <div className="flex items-start justify-between">
-                <span className="font-mono text-xs font-bold text-brand-400">{s.tag}</span>
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-brand-900 text-brand-50 transition group-hover:bg-brand-600">
-                  →
+                <span
+                  className={`font-mono text-xs font-bold ${
+                    s.featured ? "text-brand-300" : "text-brand-400"
+                  }`}
+                >
+                  {s.tag}
                 </span>
+                <div className="flex items-center gap-2">
+                  {s.featured && (
+                    <span className="rounded-full bg-brand-300 px-3 py-1 text-[10px] font-black tracking-widest text-brand-900">
+                      SIGNATURE
+                    </span>
+                  )}
+                  <span
+                    className={`grid h-10 w-10 place-items-center rounded-full transition ${
+                      s.featured
+                        ? "bg-brand-50 text-brand-900 group-hover:bg-brand-300"
+                        : "bg-brand-900 text-brand-50 group-hover:bg-brand-600"
+                    }`}
+                  >
+                    →
+                  </span>
+                </div>
               </div>
-              <h3 className="mt-8 font-serif text-2xl font-black text-brand-900">
+              <h3
+                className={`mt-8 font-serif text-2xl font-black ${
+                  s.featured ? "text-brand-50" : "text-brand-900"
+                }`}
+              >
                 {s.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-brand-700">{s.desc}</p>
+              <p
+                className={`mt-3 text-sm leading-relaxed ${
+                  s.featured ? "text-brand-100/90" : "text-brand-700"
+                }`}
+              >
+                {s.desc}
+              </p>
               <ul className="mt-6 flex flex-wrap gap-2">
                 {s.highlights.map((h) => (
                   <li
                     key={h}
-                    className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-brand-700 ring-1 ring-brand-200"
+                    className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                      s.featured
+                        ? "bg-brand-800/60 text-brand-100 ring-1 ring-brand-700"
+                        : "bg-white text-brand-700 ring-1 ring-brand-200"
+                    }`}
                   >
                     {h}
                   </li>

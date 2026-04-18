@@ -32,7 +32,7 @@ export default function Visit() {
               <dt className="w-20 flex-shrink-0 text-xs font-bold tracking-wider text-brand-500">
                 영업시간
               </dt>
-              <dd className="font-semibold">매일 10:00 – 24:00 (연중무휴)</dd>
+              <dd className="font-semibold">매일 10:00 – 20:00</dd>
             </div>
             <div className="flex gap-4">
               <dt className="w-20 flex-shrink-0 text-xs font-bold tracking-wider text-brand-500">

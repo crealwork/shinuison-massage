@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "身의손 마사지 - 오남 경락·강한압 전문";
+export const alt = "身의손 마사지 - 오남·남양주 근육전문 마사지";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -50,7 +50,7 @@ export default function OGImage() {
               borderRadius: "50%",
             }}
           />
-          ORIENTAL CARE · EST. 身의손
+          MUSCLE SPECIALIST · 근육전문 身의손
         </div>
 
         <div
@@ -92,28 +92,41 @@ export default function OGImage() {
               <div
                 style={{
                   display: "flex",
-                  fontSize: 68,
+                  fontSize: 72,
                   fontWeight: 900,
                   letterSpacing: "-0.02em",
                   lineHeight: 1.1,
                   color: "#fdf6ef",
                 }}
               >
-                오남 마사지
+                근육전문 마사지
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  fontSize: 44,
+                  fontWeight: 800,
+                  color: "#e3a161",
+                  lineHeight: 1.1,
+                  fontFamily: "sans-serif",
+                }}
+              >
+                오남 · 남양주 身의손
               </div>
               <div
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  fontSize: 40,
+                  fontSize: 32,
                   fontWeight: 700,
                   color: "#f0c79a",
-                  lineHeight: 1.2,
+                  lineHeight: 1.25,
                   fontFamily: "sans-serif",
+                  marginTop: 8,
                 }}
               >
-                <div style={{ display: "flex" }}>진짜 시원한 강한 압,</div>
-                <div style={{ display: "flex" }}>정확한 경락·통증 전문.</div>
+                <div style={{ display: "flex" }}>뭉친 근육, 정확히 짚어</div>
+                <div style={{ display: "flex" }}>강한 압으로 풀어드립니다.</div>
               </div>
             </div>
           </div>
@@ -149,7 +162,7 @@ export default function OGImage() {
               身의손 마사지
             </div>
             <div style={{ fontSize: 20, color: "#e3a161" }}>
-              경기도 남양주시 오남읍 · 10년+ 경력
+              남양주 오남읍 · 근육전문 마사지 · 10년+ 경력
             </div>
           </div>
           <div

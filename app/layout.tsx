@@ -1,22 +1,31 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import "./globals.css";
 
-const SITE_URL = "https://shinuison-massage.com";
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://shinuison-massage.vercel.app";
 const PHONE = "010-3419-5755";
 const BUSINESS_NAME = "신의손 마사지";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "오남 마사지 | 신의손 마사지 - 경락·강한압·시원한 마사지 전문",
-    template: "%s | 신의손 마사지 (오남 마사지)",
+    default:
+      "오남마사지·남양주마사지 | 신의손 마사지 - 근육전문 마사지 (강한압·시원함)",
+    template: "%s | 신의손 마사지 (오남·남양주 근육전문 마사지)",
   },
   description:
-    "오남·진접 마사지 전문 '身의손(신의손) 마사지'. 시원하고 압이 강한 경락·통증 마사지와 전신 신체관리. 남양주 오남·진접 숙련 관리사가 뭉친 근육을 시원하게 풀어드립니다. 예약문의 010-3419-5755.",
+    "오남마사지·남양주마사지는 근육전문 마사지 '身의손(신의손)'. 뭉친 근육을 정확히 짚어 풀어드리는 근육전문 마사지샵. 강한 압, 시원한 손맛, 경락·통증·신체관리까지. 남양주 오남읍 근육전문 마사지는 신의손. 예약 010-3419-5755.",
   keywords: [
+    "근육전문 마사지",
+    "근육 마사지",
+    "남양주마사지",
+    "오남마사지",
     "오남 마사지",
     "오남읍 마사지",
+    "남양주 마사지",
+    "남양주시 마사지",
     "진접 마사지",
     "진접읍 마사지",
     "신의손 마사지",
@@ -25,10 +34,10 @@ export const metadata: Metadata = {
     "통증 마사지",
     "시원한 마사지",
     "강한압 마사지",
-    "남양주 마사지",
+    "근육통 마사지",
+    "뭉친근육 마사지",
     "전신관리",
     "신체관리",
-    "근육통 마사지",
   ],
   authors: [{ name: BUSINESS_NAME }],
   creator: BUSINESS_NAME,
@@ -40,14 +49,15 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     url: SITE_URL,
     siteName: BUSINESS_NAME,
-    title: "오남 마사지 | 身의손 마사지 - 시원한 경락·강한압 전문",
+    title: "근육전문 마사지 身의손 | 오남마사지·남양주마사지",
     description:
-      "진짜 시원한 마사지, 압이 강한 경락마사지 전문. 오남 지역 숙련 관리사. 예약 010-3419-5755.",
+      "뭉친 근육을 정확히 풀어드리는 근육전문 마사지 '身의손'. 강한 압, 시원한 손맛. 예약 010-3419-5755.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "오남 마사지 | 身의손 마사지",
-    description: "시원한 경락마사지, 강한 압 전문. 예약 010-3419-5755.",
+    title: "근육전문 마사지 身의손 | 오남·남양주",
+    description:
+      "오남·남양주 근육전문 마사지는 신의손. 강한 압, 시원한 손맛. 010-3419-5755.",
   },
   robots: {
     index: true,
@@ -73,9 +83,19 @@ const jsonLd = {
   "@type": ["LocalBusiness", "HealthAndBeautyBusiness", "DaySpa"],
   "@id": `${SITE_URL}/#business`,
   name: "신의손 마사지",
-  alternateName: ["오남 마사지", "오남 신의손 마사지", "오남읍 마사지"],
+  alternateName: [
+    "근육전문 마사지 신의손",
+    "身의손 근육전문",
+    "오남마사지",
+    "남양주마사지",
+    "오남 마사지",
+    "남양주 마사지",
+    "오남 신의손 마사지",
+    "오남읍 마사지",
+  ],
   description:
-    "오남읍 경락마사지 전문점. 시원하고 압이 강한 마사지와 전신 신체관리 서비스를 제공합니다.",
+    "남양주마사지·오남마사지 근육전문 마사지샵. 뭉친 근육을 정확히 짚어 풀어드리는 근육전문 마사지. 강한 압과 시원한 손맛, 경락·통증·신체관리 서비스 제공.",
+  slogan: "근육전문 마사지",
   url: SITE_URL,
   telephone: `+82-${PHONE.replace(/-/g, "").replace(/^0/, "")}`,
   image: `${SITE_URL}/opengraph-image`,
@@ -106,16 +126,17 @@ const jsonLd = {
         "Sunday",
       ],
       opens: "10:00",
-      closes: "24:00",
+      closes: "20:00",
     },
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "마사지 및 신체관리 서비스",
+    name: "근육전문 마사지 서비스",
     itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "경락마사지" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "전신 강한압 마사지" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "시원한 스포츠 마사지" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "근육전문 마사지 - 전신" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "근육전문 마사지 - 목·어깨·등" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "근육전문 경락 마사지" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "통증·근육통 집중 관리" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "신체관리 / 바디케어" } },
     ],
   },
@@ -144,6 +165,7 @@ export default function RootLayout({
         <Script id="ld-business" type="application/ld+json" strategy="beforeInteractive">
           {JSON.stringify(jsonLd)}
         </Script>
+        <GoogleAnalytics />
       </body>
     </html>
   );

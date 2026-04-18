@@ -1,8 +1,8 @@
 const menu = [
-  { name: "부분 경락 (목·어깨)", time: "30분", price: "문의" },
-  { name: "등·허리 집중 관리", time: "40분", price: "문의" },
-  { name: "전신 경락 마사지", time: "60분", price: "문의" },
-  { name: "프리미엄 풀바디", time: "90분", price: "문의" },
+  { name: "근육전문 마사지 (전신)", time: "60분", price: "문의", hot: true },
+  { name: "근육전문 마사지 (목·어깨)", time: "30분", price: "문의" },
+  { name: "근육전문 + 통증 집중 (허리·골반)", time: "40분", price: "문의" },
+  { name: "근육전문 경락 풀바디", time: "90분", price: "문의" },
   { name: "신체관리 · 바디케어", time: "맞춤", price: "문의" },
 ];
 
@@ -14,11 +14,13 @@ export default function Pricing() {
           <div>
             <p className="text-xs font-bold tracking-[0.3em] text-brand-500">MENU</p>
             <h2 className="mt-3 font-serif text-3xl font-black leading-[1.25] text-brand-900 sm:text-5xl sm:leading-[1.18]">
+              근육전문
+              <br />
               시술 메뉴
             </h2>
             <p className="mt-5 text-sm leading-relaxed text-brand-700">
-              정확한 가격은 부위·시간·컨디션에 따라 달라집니다.
-              전화 상담 후 몸 상태에 맞는 코스를 추천해드려요.
+              모든 코스는 근육전문 기법을 기반으로 하며, 부위·강도·시간은 몸 상태에 맞춰 조절합니다.
+              정확한 가격은 전화 상담 후 안내드려요.
             </p>
             <a href="tel:01034195755" className="mt-6 inline-flex cta-primary">
               가격 문의 · 예약
@@ -32,7 +34,14 @@ export default function Pricing() {
                 className="flex items-center justify-between gap-4 px-6 py-5 hover:bg-brand-50/60"
               >
                 <div>
-                  <p className="font-bold text-brand-900">{m.name}</p>
+                  <div className="flex items-center gap-2">
+                    <p className="font-bold text-brand-900">{m.name}</p>
+                    {m.hot && (
+                      <span className="rounded-full bg-brand-900 px-2 py-0.5 text-[10px] font-black tracking-wider text-brand-50">
+                        BEST
+                      </span>
+                    )}
+                  </div>
                   <p className="mt-0.5 text-xs font-medium text-brand-500">{m.time}</p>
                 </div>
                 <span className="font-mono text-sm font-bold text-brand-700">{m.price}</span>

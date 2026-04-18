@@ -9,7 +9,7 @@ export default function Header() {
           <div className="leading-tight">
             <p className="text-sm font-black tracking-tight text-brand-900">身의손 마사지</p>
             <p className="text-[10px] font-medium tracking-wider text-brand-500">
-              오남 · 진접 경락전문
+              오남·남양주 근육전문 마사지
             </p>
           </div>
         </a>

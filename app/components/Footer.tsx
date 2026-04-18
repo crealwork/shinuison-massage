@@ -10,12 +10,13 @@ export default function Footer() {
               </span>
               <div>
                 <p className="text-lg font-black text-brand-50">身의손 마사지</p>
-                <p className="text-xs tracking-widest text-brand-400">오남 · 진접 경락전문</p>
+                <p className="text-xs tracking-widest text-brand-400">오남·남양주 근육전문</p>
               </div>
             </div>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-brand-300">
-              진짜 시원한 강한 압, 정확한 포인트. 10년 경력 관리사가 운영하는
-              오남·진접 경락·통증 전문 마사지샵.
+              뭉친 근육을 정확히 풀어드리는 <b className="text-brand-100">근육전문 마사지</b>.
+              강한 압, 시원한 손맛. 10년 경력 관리사가 운영하는 오남·남양주 근육전문
+              마사지샵입니다.
             </p>
           </div>
           <a href="tel:01034195755" className="cta-primary">
@@ -24,7 +25,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 flex flex-col gap-2 text-xs text-brand-400 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} 身의손 마사지. All rights reserved.</p>
-          <p className="tracking-wide">오남 마사지 · 진접 마사지 · 경락 · 통증 · 신체관리</p>
+          <p className="tracking-wide">근육전문 마사지 · 오남마사지 · 남양주마사지 · 경락 · 통증 · 신체관리</p>
         </div>
       </div>
     </footer>
